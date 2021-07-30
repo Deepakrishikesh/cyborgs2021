@@ -2,6 +2,7 @@ import './App.css';
 import logo from './assets/vallilogo.png';
 import Registration from './pages/Registration';
 import Landing from './pages/Landing';
+import fire from './fire';
 
 function App() {
   return (
