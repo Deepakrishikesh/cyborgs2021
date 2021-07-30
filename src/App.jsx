@@ -1,8 +1,9 @@
 import './App.css';
 import logo from './assets/vallilogo.png';
 import Registration from './pages/Registration';
+import Events from './pages/Events';
 import Landing from './pages/Landing';
-import fire from './fire';
+import fire from "./firebase";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Registration/>
         </section>
         <section>
-
+          <Events/>
         </section>
       </main>
     </>
