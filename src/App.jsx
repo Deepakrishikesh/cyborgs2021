@@ -3,7 +3,7 @@ import logo from './assets/vallilogo.png';
 import Registration from './pages/Registration';
 import Events from './pages/Events';
 import Landing from './pages/Landing';
-import fire from "./firebase";
+//import fire from "./firebase";
 
 function App() {
   return (
@@ -16,11 +16,12 @@ function App() {
           <Landing/>
         </section>
         <section>
-          <Registration/>
-        </section>
-        <section>
           <Events/>
         </section>
+        <section>
+          <Registration/>
+        </section>
+       
       </main>
     </>
   );

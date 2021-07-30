@@ -16,7 +16,7 @@ function Landing() {
         <button className="bg-blue-500 p-2 rounded-md shadow-lg m-2">
           Register Now
         </button>
-        <button className="border-blue-500 border-2 p-2 rounded-md shadow-lg m-2">
+        <button className="border-blue-400 border-2 p-2 rounded-md shadow-lg m-2">
           Know More
         </button>
       </div>
