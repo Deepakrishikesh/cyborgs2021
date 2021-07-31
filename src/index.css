@@ -1,12 +1,18 @@
-:root{
-  font-family: 'Oxygen', sans-serif;
+:root {
+  font-family: "Oxygen", sans-serif;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.bg-img {
+  background-image: url(./assets/bg.jpg);
+  /* background-position: center; */
+  background-repeat: no-repeat;
 }

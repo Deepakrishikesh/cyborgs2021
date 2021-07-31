@@ -1,7 +1,7 @@
 function EventCard({title}) {
   return (
     <>
-      <div className="m-1 rounded-md shadow-lg event-card">
+      <div className="flex bg-white flex-col m-1 rounded-md shadow-lg">
         <img
           src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fkbob.github.io%2Fimages%2Fsample-4.jpg&f=1&nofb=1"
           alt="Event Name"
