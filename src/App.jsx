@@ -19,7 +19,7 @@ function App() {
         <section>
           <Events />
         </section>
-        <section>
+        <section id="register">
           <Registration />
         </section>
       </main>

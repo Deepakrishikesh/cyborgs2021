@@ -13,9 +13,9 @@ function Landing() {
         </p>
       </div>
       <div className="flex flex-col justify-center items-stretch m-2 lg:flex-row">
-        <button className="bg-blue-500 p-2 rounded-md shadow-lg m-2">
+        <a className="flex justify-center bg-blue-500 p-2 rounded-md shadow-lg m-2" href="./#register">
           Register Now
-        </button>
+        </a>
         <button className="border-blue-500 bg-blue-100 border-2 p-2 rounded-md shadow-lg m-2">
           Know More
         </button>

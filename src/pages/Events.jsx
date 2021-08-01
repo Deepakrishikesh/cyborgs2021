@@ -28,19 +28,22 @@ function Events() {
             //scrollbar={{ draggable: true }}
           >
             <SwiperSlide>
-              <EventCard title="some pic 1" />
+              <EventCard title="Talen-di-sadee" desc="some ddesc" />
             </SwiperSlide>
             <SwiperSlide>
-              <EventCard title="some pic 2" />
+              <EventCard title="Co-di-Go" desc="some desc" />
             </SwiperSlide>
             <SwiperSlide>
-              <EventCard title="some pic 3" />
+              <EventCard title="Logo pursuit" desc="some desc" />
             </SwiperSlide>
             <SwiperSlide>
-              <EventCard title="some pic 4" />
+              <EventCard title="BGMI" desc="Survive the virtual world to finish off opponents with friends" />
             </SwiperSlide>
             <SwiperSlide>
-              <EventCard title="some pic 5" />
+              <EventCard title="Quibble" desc="Synchronize your tech intelligence with timezone" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <EventCard title="Domain Dude" desc="The Art of Hiring to breathe art into your projects" />
             </SwiperSlide>
           </Swiper>
         </div>
