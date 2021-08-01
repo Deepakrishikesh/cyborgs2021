@@ -1,7 +1,13 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import register from "../services/register";
 import Swal from "sweetalert2";
 function Registration() {
+  const talnCheckBoxRef = useRef(null);
+  const codigoCheckBoxRef = useRef(null);
+  const logoCheckBoxRef = useRef(null);
+  const bgmiCheckBoxRef = useRef(null);
+  const quibleCheckBoxRef = useRef(null);
+  const domCheckBoxRef = useRef(null);
   const [name, setName] = useState("");
   const [institute, setInstitute] = useState("");
   const [dept, setDept] = useState("");
@@ -23,7 +29,7 @@ function Registration() {
       !email.replace(/\s/g, "").length ||
       !phone ||
       !phone.replace(/\s/g, "").length ||
-      eventCount<3
+      eventCount < 3
     ) {
       return false;
     }
@@ -36,7 +42,7 @@ function Registration() {
     let temp = events;
     if (e.target.checked) {
       if (eventCount > 2) {
-        Swal.fire('No events more than 3');
+        Swal.fire("No events more than 3");
         // alert("no events more than 3");
         e.target.checked = false;
       } else {
@@ -45,33 +51,33 @@ function Registration() {
       }
     } else {
       setEvents(events.filter((i) => i !== e.target.id));
-      setEventCount(eventCount>0 ? eventCount - 1 : 0);
+      setEventCount(eventCount > 0 ? eventCount - 1 : 0);
     }
-    console.log(eventCount,events);
+    console.log(eventCount, events);
   };
 
   // check if email is valid
-  const checkEmail = () =>{
-    let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const checkEmail = () => {
+    let re =
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
-  }
+  };
 
   // check if mobile number is valid
-  const checkPhone =() =>{
+  const checkPhone = () => {
     let re = /^\d{10}$/;
     return re.test(phone);
-  }
+  };
   /* handle form submit */
   const submit = () => {
-    console.log(events);
     if (checkForm()) {
-      if(!checkEmail()){
-        Swal.fire('Enter valid Email ID')
-        return
+      if (!checkEmail()) {
+        Swal.fire("Enter valid Email ID");
+        return;
       }
-      if(!checkPhone()){
-        Swal.fire('Enter valid Phone Number')
-        return
+      if (!checkPhone()) {
+        Swal.fire("Enter valid Phone Number");
+        return;
       }
       const details = {
         name: name,
@@ -79,19 +85,34 @@ function Registration() {
         dept: dept,
         email: email,
         phone: phone,
-        events: events
+        events: events,
       };
-      register(details);
-      setName("");
-      setDept("");
-      setInstitute("");
-      setEmail("");
-      setPhone("");
-      setEventCount(0);
-      setEvents([])
+      register(details).then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "Registered Successfully",
+        });
+        resetValues();
+      });
     } else {
       Swal.fire("Enter all the details");
     }
+  };
+
+  // reset all values
+  const resetValues = () => {
+    talnCheckBoxRef.current.checked = false;
+    bgmiCheckBoxRef.current.checked = false;
+    codigoCheckBoxRef.current.checked = false;
+    quibleCheckBoxRef.current.checked = false;
+    logoCheckBoxRef.current.checked = false;
+    setName("");
+    setDept("");
+    setInstitute("");
+    setEmail("");
+    setPhone("");
+    setEventCount(0);
+    setEvents([]);
   };
 
   return (
@@ -136,39 +157,69 @@ function Registration() {
           />
           <div className="flex justify-between flex-wrap">
             <div className="flex flex-row justify-center items-center m-2">
-              <input type="checkbox" onChange={onCheckBoxClick} id="Talen-di-sadee" />
+              <input
+                type="checkbox"
+                onChange={onCheckBoxClick}
+                id="Talen-di-sadee"
+                ref={talnCheckBoxRef}
+              />
               <label htmlFor="event" className="ml-1">
-              Talen-di-sadee
+                Talen-di-sadee
               </label>
             </div>
             <div className="flex flex-row justify-center items-center m-2">
-              <input type="checkbox" onChange={onCheckBoxClick} id="Co-di-Go" />
+              <input
+                type="checkbox"
+                onChange={onCheckBoxClick}
+                id="Co-di-Go"
+                ref={codigoCheckBoxRef}
+              />
               <label htmlFor="event" className="ml-1">
-              Co-di-Go
+                Co-di-Go
               </label>
             </div>
             <div className="flex flex-row justify-center items-center m-2">
-              <input type="checkbox" onChange={onCheckBoxClick} id="Logo pursuit" />
+              <input
+                type="checkbox"
+                onChange={onCheckBoxClick}
+                id="Logo pursuit"
+                ref={logoCheckBoxRef}
+              />
               <label htmlFor="event" className="ml-1">
-              Logo pursuit
+                Logo pursuit
               </label>
             </div>
             <div className="flex justify-center items-center m-2">
-              <input type="checkbox" onChange={onCheckBoxClick} id="BGMI" />
+              <input
+                type="checkbox"
+                onChange={onCheckBoxClick}
+                id="BGMI"
+                ref={bgmiCheckBoxRef}
+              />
               <label htmlFor="event" className="ml-1">
-              BGMI
+                BGMI
               </label>
             </div>
             <div className="flex flex-row justify-center items-center m-2">
-              <input type="checkbox" onChange={onCheckBoxClick} id="Quibble" />
+              <input
+                type="checkbox"
+                onChange={onCheckBoxClick}
+                id="Quibble"
+                ref={quibleCheckBoxRef}
+              />
               <label htmlFor="event" className="ml-1">
-              Quibble
+                Quibble
               </label>
             </div>
             <div className="flex flex-row justify-center items-center m-2">
-              <input type="checkbox" onChange={onCheckBoxClick} id="Domain Dude" />
+              <input
+                type="checkbox"
+                onChange={onCheckBoxClick}
+                id="Domain Dude"
+                ref={domCheckBoxRef}
+              />
               <label htmlFor="event" className="ml-1">
-              Domain Dude
+                Domain Dude
               </label>
             </div>
           </div>
