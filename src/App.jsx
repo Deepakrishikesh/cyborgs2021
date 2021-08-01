@@ -1,27 +1,27 @@
-import './App.css';
-import logo from './assets/vallilogo.png';
-import Registration from './pages/Registration';
-import Events from './pages/Events';
-import Landing from './pages/Landing';
-//import fire from "./firebase";
+import "./App.css";
+import logo from "./assets/vallilogo.png";
+import Registration from "./pages/Registration";
+import Events from "./pages/Events";
+import Landing from "./pages/Landing";
 
 function App() {
   return (
     <>
-      <main>
-        <section className="flex flex-col justify-center items-center m-1 p-5">
-          <img src={logo} alt="College Header" className=""/>
+      <main className="m-0">
+        <section className="flex flex-col items-center h-scree mb-2 bg-fixed bg-center bg-cover bg-img">
+          <section className="flex flex-col justify-center items-center m-1 p-5">
+            <img src={logo} alt="College Header" className="lg:w-2/3" />
+          </section>
+          <section>
+            <Landing />
+          </section>
         </section>
         <section>
-          <Landing/>
+          <Events />
         </section>
-        <section>
-          <Events/>
+        <section id="register">
+          <Registration />
         </section>
-        <section>
-          <Registration/>
-        </section>
-       
       </main>
     </>
   );
