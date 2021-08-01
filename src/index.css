@@ -10,7 +10,15 @@ body{
   margin: 0px;
   padding: 0px;
 }
-
+img{
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: none;
+  pointer-events: none;
+}
+input{
+  outline: none;
+}
 .bg-img {
   background-image: url(./assets/bg.jpg);
   /* background-position: center; */

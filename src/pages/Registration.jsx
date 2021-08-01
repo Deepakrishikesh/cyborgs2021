@@ -1,5 +1,6 @@
 import { useState } from "react";
 import register from "../services/register";
+import Swal from "sweetalert2";
 function Registration() {
   const [name, setName] = useState("");
   const [institute, setInstitute] = useState("");
@@ -21,7 +22,8 @@ function Registration() {
       !email ||
       !email.replace(/\s/g, "").length ||
       !phone ||
-      !phone.replace(/\s/g, "").length
+      !phone.replace(/\s/g, "").length ||
+      eventCount<3
     ) {
       return false;
     }
@@ -34,7 +36,8 @@ function Registration() {
     let temp = events;
     if (e.target.checked) {
       if (eventCount > 2) {
-        alert("no events more than 3");
+        Swal.fire('No events more than 3');
+        // alert("no events more than 3");
         e.target.checked = false;
       } else {
         setEvents([...temp, e.target.id]);
@@ -42,21 +45,41 @@ function Registration() {
       }
     } else {
       setEvents(events.filter((i) => i !== e.target.id));
-      setEventCount(eventCount - 1);
+      setEventCount(eventCount>0 ? eventCount - 1 : 0);
     }
-    console.log(eventCount);
+    console.log(eventCount,events);
   };
 
+  // check if email is valid
+  const checkEmail = () =>{
+    let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+
+  // check if mobile number is valid
+  const checkPhone =() =>{
+    let re = /^\d{10}$/;
+    return re.test(phone);
+  }
   /* handle form submit */
   const submit = () => {
     console.log(events);
     if (checkForm()) {
+      if(!checkEmail()){
+        Swal.fire('Enter valid Email ID')
+        return
+      }
+      if(!checkPhone()){
+        Swal.fire('Enter valid Phone Number')
+        return
+      }
       const details = {
         name: name,
         institute: institute,
         dept: dept,
         email: email,
         phone: phone,
+        events: events
       };
       register(details);
       setName("");
@@ -64,8 +87,10 @@ function Registration() {
       setInstitute("");
       setEmail("");
       setPhone("");
+      setEventCount(0);
+      setEvents([])
     } else {
-      alert("Enter all the details");
+      Swal.fire("Enter all the details");
     }
   };
 
@@ -109,41 +134,41 @@ function Registration() {
             value={phone}
             placeholder="Phone"
           />
-          <div className="flex justify-center flex-wrap">
+          <div className="flex justify-between flex-wrap">
             <div className="flex flex-row justify-center items-center m-2">
-              <input type="checkbox" onChange={onCheckBoxClick} id="event1" />
+              <input type="checkbox" onChange={onCheckBoxClick} id="Talen-di-sadee" />
               <label htmlFor="event" className="ml-1">
-                Some thing
+              Talen-di-sadee
               </label>
             </div>
             <div className="flex flex-row justify-center items-center m-2">
-              <input type="checkbox" onChange={onCheckBoxClick} id="event2" />
+              <input type="checkbox" onChange={onCheckBoxClick} id="Co-di-Go" />
               <label htmlFor="event" className="ml-1">
-                Some thing
+              Co-di-Go
               </label>
             </div>
             <div className="flex flex-row justify-center items-center m-2">
-              <input type="checkbox" onChange={onCheckBoxClick} id="event3" />
+              <input type="checkbox" onChange={onCheckBoxClick} id="Logo pursuit" />
               <label htmlFor="event" className="ml-1">
-                Some thing
+              Logo pursuit
               </label>
             </div>
             <div className="flex justify-center items-center m-2">
-              <input type="checkbox" onChange={onCheckBoxClick} id="event4" />
+              <input type="checkbox" onChange={onCheckBoxClick} id="BGMI" />
               <label htmlFor="event" className="ml-1">
-                Some thing
+              BGMI
               </label>
             </div>
             <div className="flex flex-row justify-center items-center m-2">
-              <input type="checkbox" onChange={onCheckBoxClick} id="event5" />
+              <input type="checkbox" onChange={onCheckBoxClick} id="Quibble" />
               <label htmlFor="event" className="ml-1">
-                Some thing
+              Quibble
               </label>
             </div>
             <div className="flex flex-row justify-center items-center m-2">
-              <input type="checkbox" onChange={onCheckBoxClick} id="event6" />
+              <input type="checkbox" onChange={onCheckBoxClick} id="Domain Dude" />
               <label htmlFor="event" className="ml-1">
-                Some thing
+              Domain Dude
               </label>
             </div>
           </div>
