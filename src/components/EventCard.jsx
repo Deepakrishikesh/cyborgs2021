@@ -5,6 +5,8 @@ function EventCard({ title, desc }) {
     Swal.fire({
       title: title,
       html: `${desc}<br><br><p>ajsdf jsdjf l;asdk fja;lsdkj f</p>`,
+      showCloseButton: true,
+      showConfirmButton: false
     });
     // Swal.fire(title, desc, "asdflkalskdfj;");
   };
