@@ -23,6 +23,9 @@ img{
 input{
   outline: none;
 }
+input[type='checkbox']{
+  cursor: pointer;
+}
 .bg-img {
   background-image: url(./assets/bg.jpg);
   /* background-position: center; */

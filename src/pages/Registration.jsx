@@ -8,6 +8,7 @@ function Registration() {
   const bgmiCheckBoxRef = useRef(null);
   const quibleCheckBoxRef = useRef(null);
   const domCheckBoxRef = useRef(null);
+  const regButtonRef = useRef(null);
   const [name, setName] = useState("");
   const [institute, setInstitute] = useState("");
   const [dept, setDept] = useState("");
@@ -79,6 +80,7 @@ function Registration() {
         Swal.fire("Enter valid Phone Number");
         return;
       }
+      regButtonRef.current.disabled = true;
       const details = {
         name: name,
         institute: institute,
@@ -106,6 +108,7 @@ function Registration() {
     codigoCheckBoxRef.current.checked = false;
     quibleCheckBoxRef.current.checked = false;
     logoCheckBoxRef.current.checked = false;
+    regButtonRef.current.disabled = false;
     setName("");
     setDept("");
     setInstitute("");
@@ -227,6 +230,7 @@ function Registration() {
           <button
             className="p-2 rounded-md shadow-md bg-blue-300 m-2"
             onClick={submit}
+            ref = {regButtonRef}
           >
             Register
           </button>
