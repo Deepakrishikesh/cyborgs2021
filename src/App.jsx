@@ -3,8 +3,14 @@ import logo from "./assets/vallilogo.png";
 import Registration from "./pages/Registration";
 import Events from "./pages/Events";
 import Landing from "./pages/Landing";
+import fire from "./firebase";
+import { useEffect } from "react";
 
 function App() {
+  const analytics = fire.analytics();
+  useEffect(() => {
+    analytics.logEvent("page_view");
+  }, [analytics]);
   return (
     <>
       <main className="m-0">

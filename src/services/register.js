@@ -1,12 +1,9 @@
 import fire from "../firebase";
-import Swal from "sweetalert2";
-const register = (details) =>{
-    console.log(details);
-    fire.database().ref('Participants').push(details)
-    Swal.fire({
-        icon: 'success',
-        title: 'Registered Successfully'
-    })
-}
+
+// Usage of Async calls to avoid racing
+const register = async (details) => {
+  console.log(details);
+  await fire.database().ref("Participants").push(details);
+};
 
 export default register;
