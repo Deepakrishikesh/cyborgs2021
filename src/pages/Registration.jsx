@@ -80,6 +80,11 @@ function Registration() {
         Swal.fire("Enter valid Phone Number");
         return;
       }
+      Swal.fire({
+        title: '<center><img class="animate-spin w-20 h-20" src="https://image.flaticon.com/icons/png/512/3305/3305803.png" alt="Loading..." /></center>',
+        showConfirmButton: false,
+        allowOutsideClick: false
+      })
       regButtonRef.current.disabled = true;
       const details = {
         name: name,
