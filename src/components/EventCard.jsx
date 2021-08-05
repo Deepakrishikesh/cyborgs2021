@@ -6,14 +6,14 @@ function EventCard({ title, desc }) {
       title: title,
       html: `${desc}<br><br><p>ajsdf jsdjf l;asdk fja;lsdkj f</p>`,
       showCloseButton: true,
-      showConfirmButton: false
+      showConfirmButton: false,
     });
     // Swal.fire(title, desc, "asdflkalskdfj;");
   };
   return (
     <>
       <div
-        className="flex bg-white flex-col m-1 rounded-md shadow-lg p-1"
+        className="flex bg-white flex-col m-1 rounded-md shadow-lg p-1 duration-200 transform lg:hover:scale-105"
         onClick={showMoreInfo}
       >
         <img

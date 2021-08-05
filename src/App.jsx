@@ -3,6 +3,7 @@ import logo from "./assets/vallilogo.png";
 import Registration from "./pages/Registration";
 import Events from "./pages/Events";
 import Landing from "./pages/Landing";
+import Footer from "./pages/Footer";
 import fire from "./firebase";
 import { useEffect } from "react";
 
@@ -27,6 +28,9 @@ function App() {
         </section>
         <section id="register">
           <Registration />
+        </section>
+        <section>
+          <Footer />
         </section>
       </main>
     </>
