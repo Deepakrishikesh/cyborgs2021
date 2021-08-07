@@ -3,6 +3,7 @@ import logo from "./assets/vallilogo.png";
 import Registration from "./pages/Registration";
 import Events from "./pages/Events";
 import Landing from "./pages/Landing";
+import People from "./pages/People";
 import Footer from "./pages/Footer";
 import fire from "./firebase";
 import { useEffect } from "react";
@@ -14,8 +15,8 @@ function App() {
   }, [analytics]);
   return (
     <>
-      <main className="m-0">
-        <section className="flex flex-col items-center h-scree mb-2 bg-fixed bg-center bg-cover bg-img">
+      <main className="m-0 h-screen bg-fixed bg-center bg-cover bg-img">
+        <section className="flex flex-col items-center mb-2 ">
           <section className="flex flex-col justify-center items-center m-1 p-5">
             <img src={logo} alt="College Header" className="lg:w-2/3" />
           </section>
@@ -28,6 +29,9 @@ function App() {
         </section>
         <section id="register">
           <Registration />
+        </section>
+        <section>
+          <People />
         </section>
         <section>
           <Footer />

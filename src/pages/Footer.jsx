@@ -1,7 +1,6 @@
-import React from 'react'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-// import { fa }
+import React from 'react';
+import { FiInstagram } from 'react-icons/fi';
+import { AiOutlineMail } from 'react-icons/ai';
 const Footer = () => {
     return (
         <>
@@ -9,18 +8,18 @@ const Footer = () => {
                 <div className='flex flex-col justify-start'>
                     <h1 className='text-xl text-white m-auto mt-4'>Contact us</h1>
                     
-                    <div className='flex justify-start items-center m-auto mt-6 ml-0'>
+                    <div className='flex justify-start items-center m-auto mt-6 md:ml-0'>
                         <a href='https://instagram.com/cyborgs2k21?utm_medium=copy_link' target='_blank' rel='noreferrer'>
-                                <img className='h-10 w-10 m-auto border-white border-2 rounded-full bg-white' src='https://image.flaticon.com/icons/png/512/1400/1400829.png' alt='Instagram'/>
+                                <FiInstagram className='text-white text-4xl' />
                         </a>
-                        <p className='text-white m-auto ml-4 cursor-default lg:hover:underline'>Instagram</p>
+                        {window.innerWidth>800 ? <p className='text-white m-auto ml-4 cursor-default lg:hover:underline'>Instagram</p> : null}
                     </div>
 
-                    <div className='flex justify-start items-center m-auto mt-4 mb-8 ml-0'>
+                    <div className='flex justify-start items-center m-auto mt-4 mb-8 md:ml-0'>
                         <a href='mailto:cyborgs2k21@gmail.com' target='_blank' rel='noreferrer'>
-                                <img className='h-10 w-10 m-auto border-2 border-white rounded-full bg-white' src='https://image.flaticon.com/icons/png/512/561/561127.png' alt='Email'/>
+                            <AiOutlineMail className='text-white text-4xl' />
                         </a>
-                        <p className='text-white m-auto ml-4 cursor-default lg:hover:underline'>Email</p>
+                        {window.innerWidth>800 ? <p className='text-white m-auto ml-4 cursor-default lg:hover:underline'>Email</p> : null}
                     </div>
                 </div>
             </div>
