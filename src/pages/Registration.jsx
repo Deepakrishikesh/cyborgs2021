@@ -164,8 +164,9 @@ function Registration() {
             value={phone}
             placeholder="Phone"
           />
-          <div className="flex justify-between flex-wrap">
-            <div className="flex flex-row justify-center items-center m-2">
+          <p className="text-sm text-bold m-1 text-red-800">*Choose 3 Events</p>
+          <div className={window.innerWidth>800 ? "flex justify-between" : "grid grid-cols-2"}>
+            <div className="flex flex-row items-center m-2">
               <input
                 type="checkbox"
                 onChange={onCheckBoxClick}
@@ -176,7 +177,7 @@ function Registration() {
                 Talen-di-sadee
               </label>
             </div>
-            <div className="flex flex-row justify-center items-center m-2">
+            <div className="flex flex-row items-center m-2">
               <input
                 type="checkbox"
                 onChange={onCheckBoxClick}
@@ -187,7 +188,7 @@ function Registration() {
                 Co-di-Go
               </label>
             </div>
-            <div className="flex flex-row justify-center items-center m-2">
+            <div className="flex flex-row items-center m-2">
               <input
                 type="checkbox"
                 onChange={onCheckBoxClick}
@@ -198,7 +199,7 @@ function Registration() {
                 Logo pursuit
               </label>
             </div>
-            <div className="flex justify-center items-center m-2">
+            <div className="flex items-center m-2">
               <input
                 type="checkbox"
                 onChange={onCheckBoxClick}
@@ -209,7 +210,7 @@ function Registration() {
                 BGMI
               </label>
             </div>
-            <div className="flex flex-row justify-center items-center m-2">
+            <div className="flex flex-row items-center m-2">
               <input
                 type="checkbox"
                 onChange={onCheckBoxClick}
@@ -220,7 +221,7 @@ function Registration() {
                 Quibble
               </label>
             </div>
-            <div className="flex flex-row justify-center items-center m-2">
+            <div className="flex flex-row items-center m-2">
               <input
                 type="checkbox"
                 onChange={onCheckBoxClick}

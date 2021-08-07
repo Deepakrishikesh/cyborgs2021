@@ -5,7 +5,7 @@ import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
 import logo_pursuit from "../assets/event_logos/logo_pursuit.png";
-
+import iu from "../assets/event_logos/iu.jpg";
 SwiperCore.use([Autoplay, Navigation, Scrollbar, A11y]);
 
 function Events() {
@@ -25,10 +25,20 @@ function Events() {
             //scrollbar={{ draggable: true }}
           >
             <SwiperSlide>
-              <EventCard title="Talen-di-sadee" desc="some ddesc" />
+              <EventCard
+                title="Talen-di-sadee"
+                desc="some ddesc"
+                logo={iu}
+                detail=""
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <EventCard title="Co-di-Go" desc="some desc" />
+              <EventCard
+                title="Co-di-Go"
+                desc="some desc"
+                logo={iu}
+                detail=""
+              />
             </SwiperSlide>
             <SwiperSlide>
               <EventCard
@@ -62,18 +72,24 @@ function Events() {
               <EventCard
                 title="BGMI"
                 desc="Survive the virtual world to finish off opponents with friends"
+                logo={iu}
+                detail=""
               />
             </SwiperSlide>
             <SwiperSlide>
               <EventCard
                 title="Quibble"
                 desc="Synchronize your tech intelligence with timezone"
+                logo={iu}
+                detail=""
               />
             </SwiperSlide>
             <SwiperSlide>
               <EventCard
                 title="Domain Dude"
                 desc="The Art of Hiring to breathe art into your projects"
+                logo={iu}
+                detail=""
               />
             </SwiperSlide>
           </Swiper>

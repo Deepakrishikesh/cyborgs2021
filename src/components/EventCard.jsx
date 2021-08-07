@@ -1,5 +1,4 @@
 import Swal from "sweetalert2";
-
 function EventCard({ title, desc, detail, logo }) {
   const showMoreInfo = () => {
     Swal.fire({
@@ -20,7 +19,7 @@ function EventCard({ title, desc, detail, logo }) {
           src={
             logo
               ? logo
-              : "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fkbob.github.io%2Fimages%2Fsample-4.jpg&f=1&nofb=1"
+              : "../assets/event_logos/iu.jpg"
           }
           alt={title}
           className="rounded w-80 h-72 m-auto mt-4"
