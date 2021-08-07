@@ -18,7 +18,7 @@ function App() {
       <main className="m-0 lg:h-screen bg-fixed bg-center bg-cover bg-img">
         <section className="flex flex-col items-center mb-2 ">
           <section className="flex flex-col justify-center items-center m-1 p-5">
-            <img src={logo} alt="College Header" className="lg:w-2/3" />
+            <img src={logo} alt="College Header" className="lg:w-2/3 h-auto" />
           </section>
           <section>
             <Landing />
