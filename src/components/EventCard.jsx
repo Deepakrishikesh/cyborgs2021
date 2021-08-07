@@ -23,7 +23,7 @@ function EventCard({ title, desc, detail, logo }) {
               : "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fkbob.github.io%2Fimages%2Fsample-4.jpg&f=1&nofb=1"
           }
           alt={title}
-          className="rounded w-80 h-72 m-auto"
+          className="rounded w-80 h-72 m-auto mt-4"
         />
         <div className="">
           <h2 className="text-lg m-1 font-bold">{title}</h2>
