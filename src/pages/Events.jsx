@@ -26,7 +26,7 @@ function Events() {
             slidesPerView={window.innerWidth < 800 ? 1 : 3}
             spaceBetween={10}
             navigation={true}
-          //scrollbar={{ draggable: true }}
+            //scrollbar={{ draggable: true }}
           >
             <SwiperSlide>
               <EventCard title="Talen-di-sadee" desc="some ddesc" />
@@ -63,13 +63,22 @@ function Events() {
               />
             </SwiperSlide>
             <SwiperSlide>
-              <EventCard title="BGMI" desc="Survive the virtual world to finish off opponents with friends" />
+              <EventCard
+                title="BGMI"
+                desc="Survive the virtual world to finish off opponents with friends"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <EventCard title="Quibble" desc="Synchronize your tech intelligence with timezone" />
+              <EventCard
+                title="Quibble"
+                desc="Synchronize your tech intelligence with timezone"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <EventCard title="Domain Dude" desc="The Art of Hiring to breathe art into your projects" />
+              <EventCard
+                title="Domain Dude"
+                desc="The Art of Hiring to breathe art into your projects"
+              />
             </SwiperSlide>
           </Swiper>
         </div>

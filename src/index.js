@@ -4,7 +4,6 @@ import "./index.css";
 import App from "./App";
 import fire from "./firebase";
 
-
 ReactDOM.render(
   <React.StrictMode>
     <App />

@@ -81,10 +81,11 @@ function Registration() {
         return;
       }
       Swal.fire({
-        title: '<center><img class="animate-spin w-20 h-20" src="https://image.flaticon.com/icons/png/512/3305/3305803.png" alt="Loading..." /></center>',
+        title:
+          '<center><img class="animate-spin w-20 h-20" src="https://image.flaticon.com/icons/png/512/3305/3305803.png" alt="Loading..." /></center>',
         showConfirmButton: false,
-        allowOutsideClick: false
-      })
+        allowOutsideClick: false,
+      });
       regButtonRef.current.disabled = true;
       const details = {
         name: name,
@@ -113,7 +114,7 @@ function Registration() {
     codigoCheckBoxRef.current.checked = false;
     quibleCheckBoxRef.current.checked = false;
     logoCheckBoxRef.current.checked = false;
-    domCheckBoxRef.current.checked= false;
+    domCheckBoxRef.current.checked = false;
     regButtonRef.current.disabled = false;
     setName("");
     setDept("");
@@ -236,7 +237,7 @@ function Registration() {
           <button
             className="p-2 rounded-md shadow-md bg-blue-300 m-2 duration-300 transform hover:scale-105"
             onClick={submit}
-            ref = {regButtonRef}
+            ref={regButtonRef}
           >
             Register
           </button>
