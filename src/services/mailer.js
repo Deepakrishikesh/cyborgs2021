@@ -5,7 +5,4 @@ export const sendMail = async (userData) => {
       "https://csemailer-forgiving-quoll-rs.eu-gb.mybluemix.net/mailto",
       userData
     )
-    .then((res) => {
-      console.log(res);
-    });
 };

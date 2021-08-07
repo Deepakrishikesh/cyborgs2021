@@ -4,15 +4,11 @@ import EventCard from "../components/EventCard";
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
-import { useEffect } from "react";
 import logo_pursuit from "../assets/event_logos/logo_pursuit.png";
 
 SwiperCore.use([Autoplay, Navigation, Scrollbar, A11y]);
 
 function Events() {
-  useEffect(() => {
-    console.log(window.innerWidth);
-  }, []);
   return (
     <>
       <div className="p-3 lg:p-8 bg-opacity-0">
