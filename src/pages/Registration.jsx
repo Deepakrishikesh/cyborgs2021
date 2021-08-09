@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import register from "../services/register";
 import Swal from "sweetalert2";
+import existingUser from "../services/existingUser";
 function Registration() {
   const talnCheckBoxRef = useRef(null);
   const codigoCheckBoxRef = useRef(null);
@@ -69,7 +70,7 @@ function Registration() {
     return re.test(phone);
   };
   /* handle form submit */
-  const submit = () => {
+  const submit = async () => {
     if (checkForm()) {
       if (!checkEmail()) {
         Swal.fire("Enter valid Email ID");
@@ -85,7 +86,7 @@ function Registration() {
         showConfirmButton: false,
         allowOutsideClick: false,
       });
-      regButtonRef.current.disabled = true;
+      // regButtonRef.current.disabled = true;
       const details = {
         name: name,
         institute: institute,
@@ -94,14 +95,24 @@ function Registration() {
         phone: phone,
         events: events,
       };
-      register(details).then(() => {
-        Swal.fire({
-          icon: "success",
-          title: "Registered Successfully",
+      let result = await existingUser(details);
+      if (!result) {
+        register(details).then(() => {
+          Swal.fire({
+            icon: "success",
+            title: "Registered Successfully",
+          });
+          resetValues();
         });
-        resetValues();
-      });
-    } else {
+      } 
+      else {
+        Swal.fire({
+          icon: "error",
+          title: "Email ID Already Registered",
+        });
+      }
+    } 
+    else {
       Swal.fire("Enter all the details");
     }
   };
@@ -114,7 +125,7 @@ function Registration() {
     quibleCheckBoxRef.current.checked = false;
     logoCheckBoxRef.current.checked = false;
     domCheckBoxRef.current.checked = false;
-    regButtonRef.current.disabled = false;
+    // regButtonRef.current.disabled = false;
     setName("");
     setDept("");
     setInstitute("");
@@ -165,7 +176,13 @@ function Registration() {
             placeholder="Phone"
           />
           <p className="text-sm text-bold m-1 text-red-800">*Choose 3 Events</p>
-          <div className={window.innerWidth>800 ? "flex justify-between" : "grid grid-cols-2"}>
+          <div
+            className={
+              window.innerWidth > 800
+                ? "flex justify-between"
+                : "grid grid-cols-2"
+            }
+          >
             <div className="flex flex-row items-center m-2">
               <input
                 type="checkbox"

@@ -6,6 +6,9 @@ import "swiper/components/navigation/navigation.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
 import logo_pursuit from "../assets/event_logos/logo_pursuit.png";
 import iu from "../assets/event_logos/iu.jpg";
+import domain_dude from "../assets/event_logos/domain_dude.jpeg";
+import quibble from "../assets/event_logos/quibble.jpg";
+import codigo from "../assets/event_logos/codigo.jpg";
 SwiperCore.use([Autoplay, Navigation, Scrollbar, A11y]);
 
 function Events() {
@@ -27,7 +30,7 @@ function Events() {
             <SwiperSlide>
               <EventCard
                 title="Talen-di-sadee"
-                desc="some ddesc"
+                desc="It is a place to show your innovative ideas through your presentations"
                 logo={iu}
                 detail=""
               />
@@ -35,9 +38,29 @@ function Events() {
             <SwiperSlide>
               <EventCard
                 title="Co-di-Go"
-                desc="some desc"
-                logo={iu}
-                detail=""
+                desc="Your coding skills and programming knowledge will be put into test"
+                logo={codigo}
+                detail="<b>Round 1:</b><br><br>
+                1. Round 1 will be in the form of Multiple Choice Questions.<br>
+                2.The questions should be answered within the given time-limit.<br>
+                3. There is no negative marking.<br>
+                4. The selected candidates will proceed to round 2.<br><br>
+                
+                <b>Round 2:</b><br><br>
+                1. This round will test the participant's coding skills.<br>
+                2. Each participant will be given a problem.<br>
+                3. The participants have to clear the test cases, in the given time.<br><br>
+
+                <b>General Instructions:</b><br>
+                            1. Participants should turn on the video and audio.<br>
+                            2. Judges decisions will be final.<br>
+                            3. Meeting platform - Microsoft Teams.<br><br>
+                            
+              <b>Event organisers:</b><br>
+                            R. Harikrishna - <a href='tel:8870587699' class='underline'>8870587699</a><br>
+                            P. Gnanasekar - <a href='tel:9789936778' class='underline'>9789936778</a><br>
+                            S. Arulraj -  <a href='tel:9789691577' class='underline'>9789691577</a><br>
+                            P. Harish Kumar -  <a href='tel:7358288392' class='underline'>7358288392</a><br>"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -71,7 +94,7 @@ function Events() {
             <SwiperSlide>
               <EventCard
                 title="BGMI"
-                desc="Survive the virtual world to finish off opponents with friends"
+                desc="Jump into the virtual world with friends to survive and finish off your opponents"
                 logo={iu}
                 detail=""
               />
@@ -80,7 +103,7 @@ function Events() {
               <EventCard
                 title="Quibble"
                 desc="Synchronize your tech intelligence with timezone"
-                logo={iu}
+                logo={quibble}
                 detail=""
               />
             </SwiperSlide>
@@ -88,7 +111,7 @@ function Events() {
               <EventCard
                 title="Domain Dude"
                 desc="The Art of Hiring to breathe art into your projects"
-                logo={iu}
+                logo={domain_dude}
                 detail=""
               />
             </SwiperSlide>
