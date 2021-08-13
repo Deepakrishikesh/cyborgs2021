@@ -6,11 +6,11 @@ import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
 import logo_pursuit from "../assets/event_logos/logo_pursuit.png";
-import iu from "../assets/event_logos/iu.jpg";
 import domain_dude from "../assets/event_logos/domain_dude.jpeg";
 import quibble from "../assets/event_logos/quibble.jpg";
 import codigo from "../assets/event_logos/codigo.jpg";
 import bgmi from "../assets/event_logos/bgmi.jpeg";
+import talen_di_sadee from "../assets/event_logos/talen_di_sadee.jpeg";
 SwiperCore.use([Autoplay, Navigation, Scrollbar, A11y]);
 
 const MemoedEventCard = memo(EventCard);
@@ -35,7 +35,7 @@ function Events() {
               <MemoedEventCard
                 title="Talen-di-sadee"
                 desc="It is a place to show your innovative ideas through your presentations"
-                logo={iu}
+                logo={talen_di_sadee}
                 detail=""
               />
             </SwiperSlide>

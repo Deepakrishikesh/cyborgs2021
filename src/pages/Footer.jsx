@@ -14,7 +14,7 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <FiInstagram className="text-white text-4xl" />
+              <FiInstagram className="text-white text-4xl duration-200 lg:hover:text-gray-300" />
             </a>
             {window.innerWidth > 800 ? (
               <p className="text-white m-auto ml-4 cursor-default lg:hover:underline">
@@ -29,7 +29,7 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <AiOutlineMail className="text-white text-4xl" />
+              <AiOutlineMail className="text-white text-4xl duration-200 lg:hover:text-gray-300" />
             </a>
             {window.innerWidth > 800 ? (
               <p className="text-white m-auto ml-4 cursor-default lg:hover:underline">
