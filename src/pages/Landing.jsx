@@ -1,6 +1,8 @@
+import Fade from "react-reveal/Fade";
 function Landing() {
   return (
     <>
+    <Fade top cascade>
       <div className="mb-4">
         <div className="flex flex-col justify-center items-center text-center p-2 m-0">
           <h4 className="font-semibold text-base">
@@ -32,6 +34,7 @@ function Landing() {
           </a>
         </div>
       </div>
+      </Fade>
     </>
   );
 }
