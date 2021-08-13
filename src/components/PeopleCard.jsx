@@ -1,8 +1,10 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
 
-const PeopleCard = ({ name, desig, phone, photo }) => {
+const PeopleCard = ({ name, desig, phone, photo, animDur }) => {
   return (
     <>
+    <Fade duration={animDur}>
       <div className="bg-white m-4 items-stretch rounded-md shadow-lg p-1 lg:p-2">
         <div>
           <img src={photo} alt="" className="rounded w-80 h-72 m-auto mt-4" />
@@ -16,6 +18,7 @@ const PeopleCard = ({ name, desig, phone, photo }) => {
           </p>
         </div>
       </div>
+      </Fade>
     </>
   );
 };
