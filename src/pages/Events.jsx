@@ -9,6 +9,7 @@ import iu from "../assets/event_logos/iu.jpg";
 import domain_dude from "../assets/event_logos/domain_dude.jpeg";
 import quibble from "../assets/event_logos/quibble.jpg";
 import codigo from "../assets/event_logos/codigo.jpg";
+import bgmi from "../assets/event_logos/bgmi.jpeg"
 SwiperCore.use([Autoplay, Navigation, Scrollbar, A11y]);
 
 function Events() {
@@ -95,7 +96,7 @@ function Events() {
               <EventCard
                 title="BGMI"
                 desc="Jump into the virtual world with friends to survive and finish off your opponents"
-                logo={iu}
+                logo={bgmi}
                 detail=""
               />
             </SwiperSlide>

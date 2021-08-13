@@ -11,16 +11,9 @@ function EventCard({ title, desc, detail, logo }) {
   };
   return (
     <>
-      <div
-        className="flex bg-white flex-col m-1 rounded-md shadow-lg p-1 duration-200 transform lg:hover:scale-105"
-        onClick={showMoreInfo}
-      >
+      <div className="flex bg-white flex-col m-1 rounded-md shadow-lg p-1 duration-200 transform lg:hover:scale-105">
         <img
-          src={
-            logo
-              ? logo
-              : "../assets/event_logos/iu.jpg"
-          }
+          src={logo ? logo : "../assets/event_logos/iu.jpg"}
           alt={title}
           className="rounded w-80 h-72 m-auto mt-4"
         />
@@ -34,6 +27,12 @@ function EventCard({ title, desc, detail, logo }) {
             Velit ad nemo ipsa.
           </p> */}
         </div>
+        <button
+          className="bg-indigo-500 text-white p-2 rounded-md shadow-lg m-2 duration-300 lg:hover:bg-indigo-500"
+          onClick={showMoreInfo}
+        >
+          View more
+        </button>
       </div>
     </>
   );
