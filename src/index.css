@@ -20,15 +20,16 @@ img {
   -webkit-tap-highlight-color: none;
   pointer-events: none;
 }
-input {
+input:focus{
   outline: none;
+  box-shadow: 0 0 0 3px rgba(155, 184, 247);
 }
 input[type="checkbox"] {
   cursor: pointer;
+  box-shadow: none;
 }
 .bg-img {
   background-image: url(./assets/bg2.jpg);
-  /* background-position: center; */
   background-repeat: no-repeat;
 }
 
