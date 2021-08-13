@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Scrollbar, A11y, Autoplay } from "swiper";
 import EventCard from "../components/EventCard";
@@ -9,8 +10,10 @@ import iu from "../assets/event_logos/iu.jpg";
 import domain_dude from "../assets/event_logos/domain_dude.jpeg";
 import quibble from "../assets/event_logos/quibble.jpg";
 import codigo from "../assets/event_logos/codigo.jpg";
-import bgmi from "../assets/event_logos/bgmi.jpeg"
+import bgmi from "../assets/event_logos/bgmi.jpeg";
 SwiperCore.use([Autoplay, Navigation, Scrollbar, A11y]);
+
+const MemoedEventCard = memo(EventCard);
 
 function Events() {
   return (
@@ -20,8 +23,8 @@ function Events() {
           <h2 className="m-1">Events</h2>
           <Swiper
             autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
+              delay: 1500,
+              disableOnInteraction: true,
             }}
             slidesPerView={window.innerWidth < 800 ? 1 : 3}
             spaceBetween={10}
@@ -29,7 +32,7 @@ function Events() {
             //scrollbar={{ draggable: true }}
           >
             <SwiperSlide>
-              <EventCard
+              <MemoedEventCard
                 title="Talen-di-sadee"
                 desc="It is a place to show your innovative ideas through your presentations"
                 logo={iu}
@@ -37,7 +40,7 @@ function Events() {
               />
             </SwiperSlide>
             <SwiperSlide>
-              <EventCard
+              <MemoedEventCard
                 title="Co-di-Go"
                 desc="Your coding skills and programming knowledge will be put into test"
                 logo={codigo}
@@ -65,7 +68,7 @@ function Events() {
               />
             </SwiperSlide>
             <SwiperSlide>
-              <EventCard
+              <MemoedEventCard
                 title="Logo Pursuit"
                 desc="Explore the identity behind the brand symbol"
                 logo={logo_pursuit}
@@ -93,7 +96,7 @@ function Events() {
               />
             </SwiperSlide>
             <SwiperSlide>
-              <EventCard
+              <MemoedEventCard
                 title="BGMI"
                 desc="Jump into the virtual world with friends to survive and finish off your opponents"
                 logo={bgmi}
@@ -101,7 +104,7 @@ function Events() {
               />
             </SwiperSlide>
             <SwiperSlide>
-              <EventCard
+              <MemoedEventCard
                 title="Quibble"
                 desc="Synchronize your tech intelligence with timezone"
                 logo={quibble}
@@ -109,7 +112,7 @@ function Events() {
               />
             </SwiperSlide>
             <SwiperSlide>
-              <EventCard
+              <MemoedEventCard
                 title="Domain Dude"
                 desc="The Art of Hiring to breathe art into your projects"
                 logo={domain_dude}
