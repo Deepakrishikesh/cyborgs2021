@@ -1,8 +1,9 @@
 import React from "react";
 import PeopleCard from "../components/PeopleCard";
-import iu from "../assets/event_logos/iu.jpg";
 import president from "../assets/organisers_photo/president.jpeg";
 import vice_president from "../assets/organisers_photo/vice_president.png";
+import muthusenthil_sir from "../assets/organisers_photo/muthusenthil_sir.png";
+import venkatesh_sir from "../assets/organisers_photo/venkatesh_sir.png"
 const People = () => {
   return (
     <div className="lg:flex lg:flex-wrap justify-center">
@@ -27,7 +28,7 @@ const People = () => {
         name="Dr. B. MUTHUSENTHIL"
         desig="Assistant Professor"
         phone="9841898449"
-        photo={iu}
+        photo={muthusenthil_sir}
         insta=""
       />
       <PeopleCard
@@ -35,7 +36,7 @@ const People = () => {
         name="Mr. S. VENKATESH"
         desig="Assistant Professor"
         phone="9791099318"
-        photo={iu}
+        photo={venkatesh_sir}
         insta=""
       />
     </div>

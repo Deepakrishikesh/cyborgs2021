@@ -5,7 +5,7 @@ import EventCard from "../components/EventCard";
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
-import logo_pursuit from "../assets/event_logos/logo_pursuit.png";
+import logo_pursuit from "../assets/event_logos/logo_pursuit.jpg";
 import domain_dude from "../assets/event_logos/domain_dude.jpeg";
 import quibble from "../assets/event_logos/quibble.jpg";
 import codigo from "../assets/event_logos/codigo.jpg";
