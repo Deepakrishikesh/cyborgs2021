@@ -24,7 +24,7 @@ function Events() {
           <Swiper
             autoplay={{
               delay: 1500,
-              disableOnInteraction: true,
+              disableOnInteraction: false,
             }}
             slidesPerView={window.innerWidth < 800 ? 1 : 3}
             spaceBetween={10}
@@ -70,7 +70,7 @@ function Events() {
             <SwiperSlide>
               <MemoedEventCard
                 title="Logo Pursuit"
-                desc="Explore the identity behind the brand symbol"
+                desc="Explore the identity behind the brand symbols which represents your vision."
                 logo={logo_pursuit}
                 detail="<b>Round 1 -</b> Reason behind the logo<br><br>
                             1. Each participant will be shown two logo.<br>
@@ -106,7 +106,7 @@ function Events() {
             <SwiperSlide>
               <MemoedEventCard
                 title="Quibble"
-                desc="Synchronize your tech intelligence with timezone"
+                desc="Synchronize your tech intelligence with timezone, Keep Calm And Crack The Quiz"
                 logo={quibble}
                 detail=""
               />
@@ -114,7 +114,7 @@ function Events() {
             <SwiperSlide>
               <MemoedEventCard
                 title="Domain Dude"
-                desc="The Art of Hiring to breathe art into your projects"
+                desc="The Art of Hiring to breathe art into your projects, Code the web !"
                 logo={domain_dude}
                 detail=""
               />
