@@ -44,7 +44,7 @@ function Registration() {
     let temp = events;
     if (e.target.checked) {
       if (eventCount > 2) {
-        Swal.fire("No events more than 3");
+        Swal.fire("More than three events selected");
         // alert("no events more than 3");
         e.target.checked = false;
       } else {
@@ -139,7 +139,7 @@ function Registration() {
     <>
       <div className="p-3 bg-gray-300">
         <div className="flex flex-col justify-center items-stretch register-wrap lg:ml-48 lg:mr-48">
-          <h1 className="m-1">Register</h1>
+          <h1 className="m-1 text-xl">Register</h1>
           <input
             type="text"
             className="m-2 p-2 rounded-md"
@@ -191,7 +191,7 @@ function Registration() {
                 ref={talnCheckBoxRef}
               />
               <label htmlFor="event" className="ml-1">
-                Talen-di-sadee
+                TALEN-DI-SADEE
               </label>
             </div>
             <div className="flex flex-row items-center m-2">
@@ -202,7 +202,7 @@ function Registration() {
                 ref={codigoCheckBoxRef}
               />
               <label htmlFor="event" className="ml-1">
-                Co-di-Go
+                CO-DI-GO
               </label>
             </div>
             <div className="flex flex-row items-center m-2">
@@ -213,7 +213,7 @@ function Registration() {
                 ref={logoCheckBoxRef}
               />
               <label htmlFor="event" className="ml-1">
-                Logo pursuit
+                LOGO PURSUIT
               </label>
             </div>
             <div className="flex items-center m-2">
@@ -224,7 +224,7 @@ function Registration() {
                 ref={bgmiCheckBoxRef}
               />
               <label htmlFor="event" className="ml-1">
-                BGMI
+                BGMI_SURVIVE
               </label>
             </div>
             <div className="flex flex-row items-center m-2">
@@ -235,7 +235,7 @@ function Registration() {
                 ref={quibleCheckBoxRef}
               />
               <label htmlFor="event" className="ml-1">
-                Quibble
+                QUIBBLE'21
               </label>
             </div>
             <div className="flex flex-row items-center m-2">
@@ -246,7 +246,7 @@ function Registration() {
                 ref={domCheckBoxRef}
               />
               <label htmlFor="event" className="ml-1">
-                Domain Dude
+                DOMAIN DUDE
               </label>
             </div>
           </div>

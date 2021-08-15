@@ -26,7 +26,7 @@ const People = () => {
       <PeopleCard
         animDur={1050}
         name="Dr. B. MUTHUSENTHIL"
-        desig="Assistant Professor"
+        desig="Associate Professor"
         phone="9841898449"
         photo={muthusenthil_sir}
         insta=""

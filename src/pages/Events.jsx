@@ -20,7 +20,7 @@ function Events() {
     <>
       <div className="p-3 lg:p-8 bg-opacity-0">
         <div className="lg:ml-8 lg:mr-8">
-          <h2 className="m-1">Events</h2>
+          <h2 className="m-1 text-xl">Events</h2>
           <Swiper
             autoplay={{
               delay: 1500,
@@ -33,7 +33,7 @@ function Events() {
           >
             <SwiperSlide>
               <MemoedEventCard
-                title="Talen-di-sadee"
+                title="TALEN-DI-SADEE"
                 desc="It is a place to show your innovative ideas through your presentations"
                 logo={talen_di_sadee}
                 detail=""
@@ -41,7 +41,7 @@ function Events() {
             </SwiperSlide>
             <SwiperSlide>
               <MemoedEventCard
-                title="Co-di-Go"
+                title="CO-DI-GO"
                 desc="Your coding skills and programming knowledge will be put into test"
                 logo={codigo}
                 detail="<b>Round 1:</b><br><br>
@@ -69,7 +69,7 @@ function Events() {
             </SwiperSlide>
             <SwiperSlide>
               <MemoedEventCard
-                title="Logo Pursuit"
+                title="LOGO PURSUIT"
                 desc="Explore the identity behind the brand symbols which represents your vision."
                 logo={logo_pursuit}
                 detail="<b>Round 1 -</b> Reason behind the logo<br><br>
@@ -97,7 +97,7 @@ function Events() {
             </SwiperSlide>
             <SwiperSlide>
               <MemoedEventCard
-                title="BGMI"
+                title="BGMI_SURVIVE"
                 desc="Jump into the virtual world with friends to survive and finish off your opponents"
                 logo={bgmi}
                 detail=""
@@ -105,7 +105,7 @@ function Events() {
             </SwiperSlide>
             <SwiperSlide>
               <MemoedEventCard
-                title="Quibble"
+                title="QUIBBLE'21"
                 desc="Synchronize your tech intelligence with timezone, Keep Calm And Crack The Quiz"
                 logo={quibble}
                 detail=""
@@ -113,7 +113,7 @@ function Events() {
             </SwiperSlide>
             <SwiperSlide>
               <MemoedEventCard
-                title="Domain Dude"
+                title="DOMAIN DUDE"
                 desc="The Art of Hiring to breathe art into your projects, Code the web !"
                 logo={domain_dude}
                 detail=""
