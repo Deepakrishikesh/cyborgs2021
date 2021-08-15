@@ -6,9 +6,9 @@ const PeopleCard = ({ name, desig, phone, photo, insta, animDur }) => {
   return (
     <>
       <Fade duration={animDur}>
-        <div className="bg-white m-4 items-stretch rounded-md shadow-lg p-1 lg:p-2">
+        <div className="flex flex-column bg-white m-4 items-stretch rounded-md shadow-lg p-1 lg:p-2 items-center justify-center">
           <div>
-            <img src={photo} alt="" className="rounded-3xl w-72 h-64 m-auto mt-4" />
+            <img src={photo} alt="" className="rounded-full w-64 h-64 m-auto mt-4" />
             <h1 className="text-2xl m-1 font-bold">{name}</h1>
             <p className="text-lg m-1 italic">{desig}</p>
             <div className="flex justify-between items-center">
