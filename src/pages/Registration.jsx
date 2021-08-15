@@ -252,7 +252,7 @@ function Registration() {
           </div>
 
           <button
-            className="p-2 rounded-md shadow-md bg-blue-300 m-2 duration-300 transform hover:scale-105"
+            className="p-2 rounded-md shadow-md bg-blue-400 m-2 duration-300 transform hover:scale-105"
             onClick={submit}
             ref={regButtonRef}
           >
