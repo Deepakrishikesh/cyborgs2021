@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import register from "../services/register";
 import Swal from "sweetalert2";
 import existingUser from "../services/existingUser";
+import { uploadId } from "../services/storeId";
 function Registration() {
   const talnCheckBoxRef = useRef(null);
   const codigoCheckBoxRef = useRef(null);
@@ -10,6 +11,7 @@ function Registration() {
   const quibleCheckBoxRef = useRef(null);
   const domCheckBoxRef = useRef(null);
   const regButtonRef = useRef(null);
+  const fileRef = useRef(null);
   const [name, setName] = useState("");
   const [institute, setInstitute] = useState("");
   const [dept, setDept] = useState("");
@@ -17,7 +19,8 @@ function Registration() {
   const [events, setEvents] = useState([]);
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-
+  const [year, setYear] = useState("");
+  const [clgId,setClgId] = useState("");
   /* check if details are not empty */
   const checkForm = () => {
     if (
@@ -31,6 +34,10 @@ function Registration() {
       !email.replace(/\s/g, "").length ||
       !phone ||
       !phone.replace(/\s/g, "").length ||
+      !year ||
+      !year.replace(/\s/g, "").length ||
+      !clgId ||
+      !clgId.replace(/\s/g, "").length ||
       eventCount < 3
     ) {
       return false;
@@ -86,14 +93,17 @@ function Registration() {
         showConfirmButton: false,
         allowOutsideClick: false,
       });
+      const idURL = await uploadId(fileRef.current.files[0]);
       // regButtonRef.current.disabled = true;
       const details = {
         name: name,
         institute: institute,
         dept: dept,
+        year: year,
         email: email,
         phone: phone,
         events: events,
+        idURL: idURL
       };
       let result = await existingUser(details);
       if (!result) {
@@ -131,9 +141,20 @@ function Registration() {
     setInstitute("");
     setEmail("");
     setPhone("");
+    setYear("");
+    setClgId("");
     setEventCount(0);
     setEvents([]);
   };
+
+  //set File
+  const setFile = (e) => {
+    if(e.target.files[0].size > 500000){
+      Swal.fire("Please upload file less than 1MB");
+      return
+    }
+    setClgId(e.target.value);
+  }
 
   return (
     <>
@@ -159,7 +180,14 @@ function Registration() {
             className="m-2 p-2 rounded-md"
             onChange={(e) => setDept(e.target.value)}
             value={dept}
-            placeholder="Department and Year"
+            placeholder="Branch of Study"
+          />
+          <input
+            type="text"
+            className="m-2 p-2 rounded-md"
+            onChange={(e) => setYear(e.target.value)}
+            value={year}
+            placeholder="Year of Study"
           />
           <input
             type="text"
@@ -175,6 +203,29 @@ function Registration() {
             value={phone}
             placeholder="Phone"
           />
+          <label className="text-bold m-2 text-md">
+            Upload College ID 
+            <p className="text-red-700">(only .jpg, .jpeg, .png files upto 500Kb)</p>
+          </label>
+
+          <div>
+            <input
+              type="file"
+              accept=".jpg,.jpeg,.png"
+              className="m-2 p-2 text-sm bg-gray-400 rounded-full"
+              onChange={ setFile }
+              value={clgId}
+              placeholder="College ID"
+              ref={fileRef}
+            />
+            {clgId !== "" ? 
+              <button
+                className="bg-red-500 p-2 text-white rounded-md"
+                onClick={()=>setClgId("")}>
+                  Remove
+              </button>
+            : null}
+          </div>
           <p className="text-sm text-bold m-1 text-red-800">*Choose 3 Events</p>
           <div
             className={
