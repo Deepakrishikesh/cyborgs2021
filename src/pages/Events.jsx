@@ -56,9 +56,9 @@ function Events() {
 			5. Violation of rules can result in elimination of the team.</br>
 			</br>
 	  		<b>Event Organizers:</b>
-	  		J.V. Avinash - <a href='tel:xxx' class='underline'>xxx</a><br>
-  			M. PraveenKumar - <a href='tel:xxx' class='underline'>xxx</a><br>
-  			S. Kabilan - <a href='tel:xxx' class='underline'>xxx</a><br>
+	  		J.V. Avinash - <a href='tel:8675993678' class='underline'>8675993678</a><br>
+  			M. PraveenKumar - <a href='tel:9787646542' class='underline'>9787646542</a><br>
+  			S. Kabilan - <a href='tel:9500532664' class='underline'>9500532664</a><br>
 	  		"
               />
             </SwiperSlide>
