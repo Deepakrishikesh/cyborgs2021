@@ -299,7 +299,7 @@ function Registration() {
               <input
                 type="checkbox"
                 onChange={onCheckBoxClick}
-                id="Talen-di-sadee"
+                id="Talen-di-saade"
                 ref={talnCheckBoxRef}
               />
               <label htmlFor="event" className="ml-1">
