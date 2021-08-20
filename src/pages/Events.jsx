@@ -36,30 +36,44 @@ function Events() {
                 title="TALEN-DI-SADEE"
                 desc="It is a place to show your innovative ideas through your presentations"
                 logo={talen_di_sadee}
-                detail="<b>Event Structure: </b> </br>
-			1. The event will be conducted in two levels.</br>
-			2. For the First level, abstract has to be submitted before the deadline.</br>
-			3. Teams for the second round will be selected from the abstract that is submitted.</br>
-			4. Second round will be a presentation round.</br>
-			</br>
-			Abstract:</br>
-			1. The abstract must contain team name, college name,</br>
-	  		   members name and the contact details</br>
-			2. The file name should be of the format 'collegename_teamname.pdf'</br>
-			3. The abstract should be mailed to (mail id) on or before the deadline.</br>
-			</br>
-			Rules and regulations:</br>
-			1. Each team can contain maximum of 3 participants.</br>
-			2. The work should not be plagiarised.</br>
-			3. Teams qualified for the second round can present from 4 to 8 minutes.</br>
-			4. The judge's decision would be final.</br>
-			5. Violation of rules can result in elimination of the team.</br>
-			</br>
-	  		<b>Event Organizers:</b>
-	  		J.V. Avinash - <a href='tel:8675993678' class='underline'>8675993678</a><br>
-  			M. PraveenKumar - <a href='tel:9787646542' class='underline'>9787646542</a><br>
-  			S. Kabilan - <a href='tel:9500532664' class='underline'>9500532664</a><br>
-	  		"
+                detail="<b>Event Structure:</b></br>
+                1. The event will be conducted in two levels.</br>
+                2. For the First level, abstract has to be submitted before the deadline.</br>
+                3. Teams for the second round will be selected from the abstract that is submitted.</br>
+                4. Second round will be a presentation round.</br>
+                </br>
+                <b>Abstract:</b></br>
+                1. The abstract must contain team name, college name, members name and the contact details</br>
+                2. The file name should be of the format 'collegename_teamname.pdf'</br>
+                3. The abstract should be mailed to 'talendisaade@gmail.com' on or before the deadline.</br>
+                </br>
+                <b>Rules and regulations:</b></br>
+                1. Each team can contain maximum of 3 participants.</br>
+                2. The work should not be plagiarised.</br>
+                3. Teams qualified for the second round can present from 4 to 8 minutes.</br>
+                4. The judge's decision would be final.</br>
+                5. Violation of rules can result in elimination of the team.</br>
+                </br>
+                <b>Topics:</b></br>
+                1. Artificial Intelligence.</br>
+                2. Internet of Things.</br>
+                3. Automation and Robotics.</br>
+                4. Cloud Computing.</br>
+                5. Machine learning and optimization.</br>
+                6. Industrial waste water treatment.</br>
+                7. Evolution in Technologies.</br>
+                8. Programming Language.</br>
+                9. Advances in technology in today's world - Boon or Bane?</br>
+                10. Avantages of Nanotechnology.</br>
+                11. Internet Architecture and Routing.</br>
+                12. Current Technology.</br>
+                </br>
+                <b>Event organisers:</b></br>
+                Avinash J V : <a href='tel:8675993678' class='underline'>8675993678</a></br>
+                PraveenKumar M :  <a href='tel:9787646542' class='underline'>9787646542</a></br>
+                Kabilan S : <a href='tel:9500532664' class='underline'>9500532664</a></br>
+                Sriram S : <a href='tel:7708230014' class='underline'>7708230014</a></br>
+                Selva S : <a href='tel:6374747668' class='underline'>6374747668</a></br>"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -67,27 +81,30 @@ function Events() {
                 title="CO-DI-GO"
                 desc="Your coding skills and programming knowledge will be put into test"
                 logo={codigo}
-                detail="<b>Round 1:</b><br><br>
-                1. Round 1 will be in the form of Multiple Choice Questions.<br>
-                2.The questions should be answered within the given time-limit.<br>
-                3. There is no negative marking.<br>
-                4. The selected candidates will proceed to round 2.<br><br>
-                
-                <b>Round 2:</b><br><br>
-                1. This round will test the participant's coding skills.<br>
-                2. Each participant will be given a problem.<br>
-                3. The participants have to clear the test cases, in the given time.<br><br>
-
-                <b>General Instructions:</b><br>
-                            1. Participants should turn on the video and audio.<br>
-                            2. Judges decisions will be final.<br>
-                            3. Meeting platform - Microsoft Teams.<br><br>
-                            
-              <b>Event organisers:</b><br>
-                            R. Harikrishna - <a href='tel:8870587699' class='underline'>8870587699</a><br>
-                            P. Gnanasekar - <a href='tel:9789936778' class='underline'>9789936778</a><br>
-                            S. Arulraj -  <a href='tel:9789691577' class='underline'>9789691577</a><br>
-                            P. Harish Kumar -  <a href='tel:7358288392' class='underline'>7358288392</a><br>"
+                detail="<b>Round 1:</b></br>
+                1. Round 1 will be in the form of Multiple Choice Questions.</br>
+                2.The questions should be answered within the given time-limit.</br>
+                3. There is no negative marking.</br>
+                4. The selected candidates will proceed to round 2.</br>
+                </br>
+                <b>Round 2:</b></br>
+                </br>
+                1. This round will test the participant's coding skills.</br>
+                2. Each participant will be given coding problem(s).</br>
+                3. The participants have to clear the test cases, in the given time.</br>
+                </br>
+                <b>General Instructions:</b></br>
+                1. Participants should turn on the video and audio.</br>
+                2. Judges decision will be final.</br>
+                3. Meeting platform - Microsoft Teams.</br>
+                </br>
+                <b>Event organisers:</b></br>
+                R. Harikrishna -  <a href='tel:8870587699' class='underline'>8870587699</a></br>
+                P. Gnanasekar -  <a href='tel:9789936778' class='underline'>9789936778</a></br>
+                S. Arulraj -  <a href='tel:9789691577' class='underline'>9789691577</a></br>
+                P. Harish Kumar -  <a href='tel:7358288392' class='underline'>7358288392</a></br>
+                R. Deepak Rishikesh -  <a href='tel:9094219094' class='underline'>9094219094</a></br>
+                  "
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -95,27 +112,29 @@ function Events() {
                 title="LOGO PURSUIT"
                 desc="Explore the identity behind the brand symbols which represents your vision."
                 logo={logo_pursuit}
-                detail="<b>Round 1 -</b> Reason behind the logo<br><br>
-                            1. Each participant will be shown two logo.<br>
-                            2. Participants need to identify, abbreviate and tell the reason behind the logo.<br>
-                            3. The marks allotment will be classified into three division (identify, abbreviation and reason).<br>
-                            4. Timings will be 2 minute for each participants.<br>
-                            5. Shortlisted candidates will participate in round 2.<br><br>
-
-                            <b>Round 2 –</b> Six-logos<br><br>
-                            1. Participants have to choose random number under which they will be given six-logos to identify. <br>
-                            2. Each participant will be given 1 minute for this round.<br><br>
-
-                            <b>General Instructions:</b><br>
-                            1. Participants should turn on the video and audio during their turn.<br>
-                            2. Judges decisions will be final.<br>
-                            3. Meeting platform-Microsoft Teams.<br>
-                            4. Check your spam messages.<br><br>
-                            
-                            <b>Event organisers:</b><br>
-                            S. Jaya kumar - <a href='tel:9940034885' class='underline'>9940034885</a><br>
-                            K.S Aakash - <a href='tel:9952597968' class='underline'>9952597968</a><br>
-                            P. Harish -  <a href='tel:7358821566' class='underline'>7358821566</a><br>"
+                detail="<b>Rules:</b></br>
+                <b>Round 1</b>- Reason behind the logo</br>
+                1. Each participant will be shown two logos.</br> 
+                2. Participants need to identify, abbreviate and tell the reason behind the logo.</br>
+                3. The marks allotment will be classified into three division (identifying, abbreviation and reason).</br>
+                4. Timings will be 2 minute for each participant.</br>
+                5. Shortlisted candidates will participate in round 2.</br>
+                </br>
+                <b>Round 2</b> – Six-logos.</br>
+                1. Participants have to choose random number under which they will be given six-logos to identify. </br>
+                2. Each participant will be given 1 minute for this round.</br>
+                </br>
+                <b>General Instructions:</b></br>
+                1. Participants should turn on the video and audio during their turn.</br>
+                2. Judges decision will be final.</br>
+                3. Meeting platform-Microsoft Teams.</br>
+                4. Need to check your mail and spam messages.</br>
+                <b>Event Organizers</b></br>
+                </br>
+                S. Jaya kumar - <a href='tel:9940034885' class='underline'>9940034885</a><br>
+                K.S Aakash - <a href='tel:9952597968' class='underline'>9952597968</a><br>
+                P. Harish -  <a href='tel:7358821566' class='underline'>7358821566</a><br>
+                "
               />
             </SwiperSlide>
             <SwiperSlide>
