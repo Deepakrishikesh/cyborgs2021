@@ -20,7 +20,7 @@ function Registration() {
   const [events, setEvents] = useState([]);
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [year, setYear] = useState("");
+  const [year, setYear] = useState("1st year");
   const [clgId, setClgId] = useState("");
   /* check if details are not empty */
   const checkForm = () => {
@@ -49,8 +49,24 @@ function Registration() {
 
   // handle upload
   const uploadMirror = () => {
-    let event = document.createEvent('MouseEvent');
-    event.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+    let event = document.createEvent("MouseEvent");
+    event.initMouseEvent(
+      "click",
+      true,
+      true,
+      window,
+      0,
+      0,
+      0,
+      0,
+      0,
+      false,
+      false,
+      false,
+      false,
+      0,
+      null
+    );
     fileRef.current.dispatchEvent(event);
   };
 
@@ -75,8 +91,7 @@ function Registration() {
   // check if email is valid
   const checkEmail = () => {
     // eslint-disable-next-line
-    let re =
-      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
   };
 
@@ -114,15 +129,30 @@ function Registration() {
         events: events,
         idURL: idURL,
       };
-      let result = await existingUser(details);
-      if (!result) {
-        register(details).then(() => {
-          Swal.fire({
-            icon: "success",
-            title: "Registered Successfully",
-          });
-          resetValues();
+      let result = await existingUser(details).catch((e) => {
+        Swal.fire({
+          icon: "warning",
+          title: "Some error occured",
+          text: "Please try again later",
         });
+      });
+      if (!result) {
+        register(details)
+          .catch((e) => {
+            Swal.fire({
+              icon: "warning",
+              title: "Some error occured",
+              text: "Please try again later",
+            });
+          })
+          .then(() => {
+            Swal.fire({
+              icon: "success",
+              title: "Registered Successfully",
+              html: "<p>Join the given link: <a href='https://tinyurl.com/kkb567w3' target='_blank' rel='noreferrer' class='underline text-blue-400'>https://tinyurl.com/kkb567w3</a></p>",
+            });
+            resetValues();
+          });
       } else {
         Swal.fire({
           icon: "error",
@@ -156,7 +186,7 @@ function Registration() {
 
   //set File
   const setFile = (e) => {
-    if (e.target.files[0].size > 500000) {
+    if (e.target.files[0].size > 1048576) {
       Swal.fire("Please upload file less than 1MB");
       return;
     }
