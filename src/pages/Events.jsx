@@ -33,7 +33,7 @@ function Events() {
           >
             <SwiperSlide>
               <MemoedEventCard
-                title="TALEN-DI-SADEE"
+                title="TALEN-DI-SAADE"
                 desc="It is a place to show your innovative ideas through your presentations"
                 logo={talen_di_sadee}
                 detail="<b>Event Structure:</b></br>

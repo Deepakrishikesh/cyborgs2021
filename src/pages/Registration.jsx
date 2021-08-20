@@ -303,7 +303,7 @@ function Registration() {
                 ref={talnCheckBoxRef}
               />
               <label htmlFor="event" className="ml-1">
-                TALEN-DI-SADEE
+                TALEN-DI-SAADE
               </label>
             </div>
             <div className="flex flex-row items-center m-2">
