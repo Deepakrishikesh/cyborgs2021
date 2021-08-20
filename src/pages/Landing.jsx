@@ -6,7 +6,7 @@ function Landing() {
       <div className="mb-4">
         <div className="flex flex-col justify-center items-center text-center p-2 m-0">
           <h4 className="font-semibold text-base">
-            Department of Computer Science and Engineering Proudly Presents
+            Department of Computer Science and Engineering & Department of Cyber Security in association with CSI - Kancheepuram Chapter Proudly Presents
           </h4>
           <h2 className="text-base font-light">
             11th National Level Symposium
