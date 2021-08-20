@@ -166,7 +166,7 @@ function Events() {
                             V. Nikesh - <a href='tel:6383500320' class='underline'>6383500320</a><br>
                             V. Sanjay - <a href='tel:9789041989' class='underline'>9789041989</a><br>
                             P. Karthikeyan -  <a href='tel:6379911032' class='underline'>6379911032</a><br>
-                            D. Varun -  <a href='tel:8838210697' class='underline'>8838210697</a><br>"
+                            M. Solai Raj -  <a href='tel:8428732579' class='underline'>8428732579</a><br>"
               />
             </SwiperSlide>
             <SwiperSlide>
