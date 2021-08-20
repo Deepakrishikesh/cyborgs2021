@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import register from "../services/register";
 import Swal from "sweetalert2";
+import { IoMdCloudUpload, IoMdTrash } from "react-icons/io";
 import existingUser from "../services/existingUser";
 import { uploadId } from "../services/storeId";
 function Registration() {
@@ -20,7 +21,7 @@ function Registration() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [year, setYear] = useState("");
-  const [clgId,setClgId] = useState("");
+  const [clgId, setClgId] = useState("");
   /* check if details are not empty */
   const checkForm = () => {
     if (
@@ -46,6 +47,12 @@ function Registration() {
     return true;
   };
 
+  // handle upload
+  const uploadMirror = () => {
+    let event = new Event("click");
+    fileRef.current.dispatchEvent(event);
+  };
+
   // handle checkbox
   const onCheckBoxClick = (e) => {
     let temp = events;
@@ -67,7 +74,8 @@ function Registration() {
   // check if email is valid
   const checkEmail = () => {
     // eslint-disable-next-line
-    let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let re =
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
   };
 
@@ -103,7 +111,7 @@ function Registration() {
         email: email,
         phone: phone,
         events: events,
-        idURL: idURL
+        idURL: idURL,
       };
       let result = await existingUser(details);
       if (!result) {
@@ -114,15 +122,13 @@ function Registration() {
           });
           resetValues();
         });
-      } 
-      else {
+      } else {
         Swal.fire({
           icon: "error",
           title: "Email ID Already Registered",
         });
       }
-    } 
-    else {
+    } else {
       Swal.fire("Enter all the details");
     }
   };
@@ -149,12 +155,12 @@ function Registration() {
 
   //set File
   const setFile = (e) => {
-    if(e.target.files[0].size > 500000){
+    if (e.target.files[0].size > 500000) {
       Swal.fire("Please upload file less than 1MB");
-      return
+      return;
     }
     setClgId(e.target.value);
-  }
+  };
 
   return (
     <>
@@ -182,13 +188,23 @@ function Registration() {
             value={dept}
             placeholder="Branch of Study"
           />
-          <input
+          {/* <input
             type="text"
             className="m-2 p-2 rounded-md"
             onChange={(e) => setYear(e.target.value)}
             value={year}
             placeholder="Year of Study"
-          />
+          /> */}
+          <select
+            className="m-2 p-2 rounded-md bg-white"
+            onChange={(e) => setYear(e.target.value)}
+            value={year}
+          >
+            <option value="1st Year">1st year</option>
+            <option value="2nd Year">2nd year</option>
+            <option value="3rd Year">3rd year</option>
+            <option value="4th Year">4th year</option>
+          </select>
           <input
             type="text"
             className="m-2 p-2 rounded-md"
@@ -204,27 +220,41 @@ function Registration() {
             placeholder="Phone"
           />
           <label className="text-bold m-2 text-md">
-            Upload College ID 
-            <p className="text-red-700">(only .jpg, .jpeg, .png files upto 500Kb)</p>
+            Upload College ID
+            <p className="text-red-700">
+              (only .jpg, .jpeg, .png files upto 1Mb)
+            </p>
           </label>
-
-          <div>
-            <input
-              type="file"
-              accept=".jpg,.jpeg,.png"
-              className="m-2 p-2 text-sm bg-gray-400 rounded-full"
-              onChange={ setFile }
-              value={clgId}
-              placeholder="College ID"
-              ref={fileRef}
-            />
-            {clgId !== "" ? 
+          <div className="flex items-center mb-2">
+            {/* sample button above */}
+            <div>
               <button
-                className="bg-red-500 p-2 text-white rounded-md"
-                onClick={()=>setClgId("")}>
-                  Remove
+                onClick={uploadMirror}
+                className="flex items-center p-2 bg-green-300 m-1 rounded "
+              >
+                <IoMdCloudUpload size={22} />
+                &nbsp;&nbsp;
+                <span>Upload</span>
               </button>
-            : null}
+              <input
+                type="file"
+                accept=".jpg,.jpeg,.png"
+                className="height-0"
+                onChange={setFile}
+                hidden
+                value={clgId}
+                placeholder="College ID"
+                ref={fileRef}
+              />
+            </div>
+            {clgId !== "" ? (
+              <button
+                className="bg-red-500 p-2 text-white rounded-md m-1"
+                onClick={() => setClgId("")}
+              >
+                <IoMdTrash size={22} />
+              </button>
+            ) : null}
           </div>
           <p className="text-sm text-bold m-1 text-red-800">*Choose 3 Events</p>
           <div
