@@ -332,7 +332,7 @@ function Registration() {
               <input
                 type="checkbox"
                 onChange={onCheckBoxClick}
-                id="BGMI"
+                id="BGMI_Survive"
                 ref={bgmiCheckBoxRef}
               />
               <label htmlFor="event" className="ml-1">
@@ -343,7 +343,7 @@ function Registration() {
               <input
                 type="checkbox"
                 onChange={onCheckBoxClick}
-                id="Quibble"
+                id="Quibble'21"
                 ref={quibleCheckBoxRef}
               />
               <label htmlFor="event" className="ml-1">
