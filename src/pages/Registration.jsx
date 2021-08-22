@@ -24,6 +24,7 @@ function Registration() {
   const [clgId, setClgId] = useState("");
   /* check if details are not empty */
   const checkForm = () => {
+    // console.log({name,institute,dept,email,phone,year,clgId,eventCount});
     if (
       !name ||
       !name.replace(/\s/g, "").length ||
@@ -177,8 +178,8 @@ function Registration() {
     setDept("");
     setInstitute("");
     setEmail("");
+    setYear("1st year");
     setPhone("");
-    setYear("");
     setClgId("");
     setEventCount(0);
     setEvents([]);
